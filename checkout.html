@@ -63,14 +63,43 @@
               </nav>
 
               <div class="container-fluid">
-                <h1 class="mt-4"></h1>
-                
+                <h1 class="mt-4">Sanders Theme park</h1>
+                <p>Home page.</p>
+
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+              <div class="HomeSlide">
+                <div class="numbertext">1 / 3</div>
+                <img src="Map1.jpg" class="home-image">
+              </div>
+
+              <div class="HomeSlide">
+                <div class="numbertext">2 / 3</div>
+                <img src="Home2.jpg" class="home-image">
+              </div>
+
+              <div class="HomeSlide">
+                <div class="numbertext">3 / 3</div>
+                <img src="Home3.jpg" class="home-image">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
 
           </div>
         </div>
@@ -78,51 +107,7 @@
 
         </div>
         <!-- Page Content -->
-        <body>
-          <div class="container h-100">
-            <div class="d-flex justify-content-center h-100">
-              <div class="user_card">
-                <div class="d-flex justify-content-center">
-                  <div class="brand_logo_container">
-                    <img src="LoginLogo.png" class="brand_logo" alt="Logo">
-                  </div>
-                </div>
-                <div class="d-flex justify-content-center form_container">
-                  <form>
-                    <div class="input-group mb-3">
-                      <div class="input-group-append">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                      </div>
-                      <input type="text" name="" class="form-control input_user" value="" placeholder="username">
-                    </div>
-                    <div class="input-group mb-2">
-                      <div class="input-group-append">
-                        <span class="input-group-text"><i class="fas fa-key"></i></span>
-                      </div>
-                      <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customControlInline">
-                        <label class="custom-control-label" for="customControlInline">Remember me</label>
-                      </div>
-                    </div>
-                      <div class="d-flex justify-content-center mt-3 login_container">
-                   <button type="button" name="button" class="btn login_btn">Login</button>
-                   </div>
-                  </form>
-                </div>
-            
-                <div class="mt-4">
-                  <div class="d-flex justify-content-center links">
-                    Don't have an account? <a href="#" class="ml-2">Sign Up</a>
-                  </div>
-                  <div class="d-flex justify-content-center links">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
 
         <!-- /#page-content-wrapper -->
@@ -135,6 +120,35 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("HomeSlide");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
   </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
