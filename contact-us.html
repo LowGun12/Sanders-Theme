@@ -24,7 +24,7 @@
       <div class="col-md-3">
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-          <div class="sidebar-heading"><img src="Logo.PNG" alt="Sanders" class="logo"> </div>
+          <div class="sidebar-heading"><img src="images/Logo.PNG" alt="Sanders" class="logo"> </div>
           <div class="list-group list-group-flush left-nav">
             <a href="Waterpark.html" class="list-group-item list-group-item-action bg-light">Waterpark</a>
             <a href="Themepark.html" class="list-group-item list-group-item-action bg-light">Themepark</a>
@@ -50,7 +50,7 @@
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Profile
                       </a>
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="login.html">Login</a>
@@ -80,8 +80,28 @@
 
         </div>
         <!-- Page Content -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQSLaHEsqrRwESjUfBDspeiEFvwRxnAa7bNLO_4hLpN9zjvQ/viewform?embedded=true" width="640" height="808" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+        <div class="container">
+          <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Send us a message and we will reply as soon as we can</p>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="images/contact.jpg" style="width:100%">
+            </div>
+            <div class="column">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write your message" style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
 
         <!-- /#page-content-wrapper -->
 
