@@ -64,16 +64,14 @@
 
               <div class="container-fluid">
                 <h1 class="mt-4"></h1>
-                <p>Food Pricing</p>
-
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-        
-        
+
+
 
           </div>
         </div>
@@ -81,89 +79,51 @@
 
         </div>
         <!-- Page Content -->
-        <table class="tg">
-          <thead>
-            <tr>
-              <th class="tg-0pky"></th>
-              <th class="tg-0pky">Small</th>
-              <th class="tg-0pky">Medium</th>
-              <th class="tg-0pky">large</th>
-              <th class="tg-0pky">add a side of chips</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="tg-0pky">Burger</td>
-              <td class="tg-0pky">£3</td>
-              <td class="tg-0pky">£4</td>
-              <td class="tg-0pky">£5</td>
-              <td class="tg-0pky">+£1</td>
-            </tr>
-            <tr>
-              <td class="tg-0pky">Hotdog</td>
-              <td class="tg-0pky">£3</td>
-              <td class="tg-0pky">£4</td>
-              <td class="tg-0pky">£5</td>
-              <td class="tg-0pky">+£1</td>
-            </tr>
-            <tr>
-              <td class="tg-0lax">Chicken Nuggets</td>
-              <td class="tg-0lax">£3</td>
-              <td class="tg-0lax">£4</td>
-              <td class="tg-0lax">£5</td>
-              <td class="tg-0lax">+£1</td>
-            </tr>
-            <tr>
-              <td class="tg-0pky">Chips</td>
-              <td class="tg-0pky">£1.50</td>
-              <td class="tg-0pky">£2.50</td>
-              <td class="tg-0pky">£3</td>
-              <td class="tg-0pky"></td>
-            </tr>
-            <tr>
-              <td class="tg-za14">Jacket Potato</td>
-              <td class="tg-za14"></td>
-              <td class="tg-za14"></td>
-              <td class="tg-za14">£4</td>
-              <td class="tg-za14">+75p per filling</td>
-            </tr>
-            <tr>
-              <td class="tg-za14">Fresh Donuts </td>
-              <td class="tg-za14"></td>
-              <td class="tg-za14"></td>
-              <td class="tg-za14"></td>
-              <td class="tg-za14">£3 for 5 </td>
-            </tr>
-            <tr>
-              <td class="tg-za14">Candy floss</td>
-              <td class="tg-za14">£2</td>
-              <td class="tg-za14">£3</td>
-              <td class="tg-za14">£3.50</td>
-              <td class="tg-za14"></td>
-            </tr>
-          </tbody>
-          </table>
+        <button id="button1" onclick="addToCart(1)" class="cbutton" onclick="functionName()">
+          Family Pass 3 children 2 adults £55 Click anywhere to add to cart
+        </button>
+        <div class="divider"></div>
+        <button id="button2" onclick="addToCart(1)" class="cbutton" onclick="functionName()">
+          Adult Single Ticket £20 Click anywhere to add to cart
+        </button>
+        <div class="divider"></div>
+        <button id="button3" onclick="addToCart(1)" class="cbutton" onclick="functionName()">
+          Single Child Ticket £10 Click anywhere To add to cart
+        </button>
 
-          <table class="tg">
-            <thead>
-              <tr>
-                <th class="tg-0lax">Adult ticket (18+)</th>
-                <th class="tg-0lax">£20</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="tg-0lax">Children (under 5s go free)</td>
-                <td class="tg-0lax">£10</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Family ticket (3 children 2 adults)</td>
-                <td class="tg-0lax">£55</td>
-              </tr>
-            </tbody>
-            </table>
 
-            
+
+
+
+<script>
+        var cart = [];
+
+        addToCart(buttonId); {
+
+        var productElement = document.getElementById("product" + itemId);
+        var buttonElement = document.getElementById("button" + itemId);
+
+        if (cart.contains(itemId)) {
+        // remove from cart
+        cart.splice(cart.indexOf(itemId), 1);
+
+        productElement.innerHTML = "In cart";
+        buttonElement Ement.innerHTML = "Remove from cart";
+        }
+        else {
+        // add to cart
+        cart.push(itemId);
+        productElement.innerHTML = "Not in cart";
+        buttonElement .innerHTML = "Add to cart";
+        }
+
+
+        }
+      </script>
+
+      
+
+
         <!-- /#page-content-wrapper -->
 
       </div>
@@ -177,8 +137,12 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
 
 
 </body>
